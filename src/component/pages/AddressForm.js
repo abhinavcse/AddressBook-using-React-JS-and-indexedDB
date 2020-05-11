@@ -172,7 +172,7 @@ export default function AddressForm() {
             let zipCode = location['zipCode']; let contact = location['contact'];
             if (zipCode.length < 5 || zipCode.length > 10 || zipCode.indexOf(' ') >= 0) {
                 return handleClick("Zip code is not valid");
-            } else if (isNaN(contact) || contact.length < 5 || contact.length > 12 || contact.indexOf(' ') >= 0) {
+            } else if (isNaN(contact) || contact.length < 10 || contact.length > 10 || contact.indexOf(' ') >= 0) {
                 return handleClick("Phone number is not valid");
             }
             location.contact = formatPhoneNumber(contact);
